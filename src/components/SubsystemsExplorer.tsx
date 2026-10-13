@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Layers, Shield, Cpu, Anchor, CheckCircle, ExternalLink } from 'lucide-react';
+import latticeImage from '../assets/images/momentum_ring_lattice_1791905111187.jpg';
 
 interface SubsystemSpec {
   id: 'core' | 'arrays' | 'skyhook';
@@ -290,9 +291,12 @@ export const SubsystemsExplorer: React.FC = () => {
 
         <div className="lg:col-span-7 relative bg-slate-950">
           <img
-            src="/src/assets/images/momentum_ring_lattice_1791905111187.jpg"
+            src={latticeImage}
             alt="Aerospace laboratory test bench testing electromagnetic momentum transfer coils and carbon-nanotube levitation track"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = '/images/momentum_ring_lattice_1791905111187.jpg';
+            }}
             className="w-full h-full object-cover max-h-[380px] lg:max-h-full"
           />
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass, BookOpen, Clock, Building2, ShieldAlert } from 'lucide-react';
+import heroImage from '../assets/images/bramhayaan_megastructure_1791905087923.jpg';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -80,9 +81,13 @@ export const HeroSection: React.FC = () => {
         <div className="lg:col-span-5 flex flex-col rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-800 shadow-2xl">
           <div className="relative aspect-[16/10] sm:aspect-[16/11] lg:h-full overflow-hidden">
             <img
-              src="/src/assets/images/bramhayaan_megastructure_1791905087923.jpg"
+              src={heroImage}
               alt="Bramhayaan 1,600-meter orbital megastructure spire rising through the stratospheric cloud deck with rotating gyroscopic momentum rings"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                // Fallback to public folder path if needed
+                (e.currentTarget as HTMLImageElement).src = '/images/bramhayaan_megastructure_1791905087923.jpg';
+              }}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
             {/* Scrim overlay with caption */}

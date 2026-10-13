@@ -2,5 +2,7 @@
   "name": "Bramhayaan Megastructure — Astrophysics & Technical Briefing",
   "description": "Public research article and interactive briefing on Bramhayaan, a 1,600-meter orbital megastructure evaluating gravitational decoupling and rotational momentum exchange.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
